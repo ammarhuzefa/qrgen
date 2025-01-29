@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qrgen Documentation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #eef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #eef;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>qrgen</h1>
+
+    <h2>Description</h2>
+    <p><strong>qrgen</strong> is a command-line application that generates QR codes for given text or URLs and outputs an image in SVG or PNG formats.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Generates QR codes from text, URLs, or file contents.</li>
+        <li>Supports output in <strong>SVG</strong> and <strong>PNG</strong> formats.</li>
+        <li>Saves the QR code with a specified filename.</li>
+        <li>Uses the <code>qrcode</code>, <code>resvg</code>, and <code>image</code> crates for rendering.</li>
+    </ul>
+
+    <h2>Requirements</h2>
+    <ul>
+        <li><strong>Operating System:</strong> Linux (Ubuntu recommended) or macOS.</li>
+        <li><strong>Rust:</strong> Version 1.42.0 or later.</li>
+        <li>A terminal or command-line interface.</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <ol>
+        <li><strong>Clone the repository:</strong></li>
+        <pre><code>git clone https://github.com/ammarhuzefa/qrgen
+cd qrgen</code></pre>
+
+        <li><strong>Build the application in release mode:</strong></li>
+        <pre><code>cargo build --release</code></pre>
+
+        <p>The compiled binary will be located at:</p>
+        <pre><code>target/release/qrgen</code></pre>
+    </ol>
+
+    <h2>Usage</h2>
+
+    <h3>Running the Program</h3>
+    <p>Navigate to the release directory:</p>
+    <pre><code>cd target/release</code></pre>
+
+    <p>Run the program with a URL to your repository as input:</p>
+    <pre><code>./qrgen https://github.com/ammarhuzefa/qrgen</code></pre>
+
+    <h2>Output</h2>
+    <p>The generated QR code will be saved as <code>qrcode.png</code> by default.</p>
+
+    <h2>Notes</h2>
+    <p>Ensure the program has execute permissions:</p>
+    <pre><code>chmod +x qrgen</code></pre>
+
+    <p>The application can handle filenames pointing to <code>.txt</code> files located in the same directory as input.</p>
+
+    <p>You can also specify and change the name of the output file (second argument) and produce output as an SVG instead (third argument). Example usage:</p>
+    <pre><code>./qrgen https://github.com/ammarhuzefa/qrgen repo</code></pre>
+    <pre><code>./qrgen https://github.com/ammarhuzefa/qrgen repo svg</code></pre>
+    <pre><code>./qrgen https://github.com/ammarhuzefa/qrgen - svg</code></pre>
+
+    <h2>Contributing</h2>
+    <p>Contributions are welcome! Feel free to submit a pull request or open an issue for bug reports or feature requests.</p>
+
+    <h2>Contact</h2>
+    <p>For any questions or feedback, please contact:</p>
+    <ul>
+        <li>GitHub: <a href="https://github.com/ammarhuzefa">ammarhuzefa</a></li>
+        <li>Email: <a href="mailto:ammarhuzefa02@gmail.com">ammarhuzefa02@gmail.com</a></li>
+    </ul>
+</body>
+</html>
